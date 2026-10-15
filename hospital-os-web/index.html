@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospital OS — Patient Monitoring</title>
+  <meta name="description" content="Real-time patient monitoring and resource management.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="home" class="home" hidden>
+    <header class="h-nav">
+      <a class="h-brand" href="#home">
+        <span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+        <span><span class="brand-name">Hospital OS</span><span class="brand-sub">Patient Monitoring</span></span>
+      </a>
+      <nav class="h-links" aria-label="Home">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a class="btn primary" href="#monitor">Open Dashboard</a>
+      </nav>
+    </header>
+
+    <section class="h-hero">
+      <div class="h-hero-text">
+        <span class="h-eyebrow"><span class="pulse"></span>Live at General Hospital</span>
+        <h1>Every patient. Every vital sign. <span>In real time.</span></h1>
+        <p>Hospital OS brings bedside monitors, triage and hospital resources onto one screen, so care teams see who needs attention first and have what they need to respond.</p>
+        <div class="h-cta">
+          <a class="btn primary big" href="#monitor"><span data-icon="grid"></span>Open Live Monitor</a>
+          <a class="btn ghost-dark big" href="#patients"><span data-icon="users"></span>View Patients</a>
+        </div>
+      </div>
+      <div class="h-preview" aria-label="Live preview">
+        <div class="hp-head"><span>Live overview</span><span class="hp-live"><i></i>LIVE</span></div>
+        <svg class="ecg" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
+          <polyline points="0,32 40,32 48,32 54,26 60,32 70,32 76,36 82,6 88,52 94,32 108,32 116,24 128,32 150,32 190,32 198,32 204,26 210,32 220,32 226,36 232,6 238,52 244,32 258,32 266,24 278,32 300,32"/>
+        </svg>
+        <div id="home-preview" class="hp-list"></div>
+      </div>
+    </section>
+
+    <section class="h-stats" aria-label="Current status">
+      <div><b id="hs-patients">0</b><span>Patients admitted</span></div>
+      <div><b id="hs-sensors">0</b><span>Sensors online</span></div>
+      <div><b id="hs-alerts">0</b><span>Active alerts</span></div>
+      <div><b id="hs-beds">0</b><span>ICU beds available</span></div>
+    </section>
+
+    <section id="features" class="h-section">
+      <div class="h-section-head"><h2>Built for the ward floor</h2><p>Everything a care team needs during a shift, on one screen.</p></div>
+      <div class="h-features">
+        <article><div class="hf-icon blue"><span data-icon="activity"></span></div><h3>Live vital signs</h3><p>Heart rate, SpO₂, blood pressure, temperature, respiration and ECG, updated every three seconds with trend lines.</p></article>
+        <article><div class="hf-icon red"><span data-icon="alert"></span></div><h3>Automatic triage</h3><p>Patients are graded Stable, Serious or Critical from their combined readings, so the sickest are always at the top.</p></article>
+        <article><div class="hf-icon green"><span data-icon="radio"></span></div><h3>Sensor reliability</h3><p>Every device gets a reliability score. Loose leads and sudden glitches are flagged instead of raising false alarms.</p></article>
+        <article><div class="hf-icon cyan"><span data-icon="stetho"></span></div><h3>Resource management</h3><p>ICU beds, ventilators, blood units and staff are assigned as patients' needs change, and shortages are shown straight away.</p></article>
+        <article><div class="hf-icon amber"><span data-icon="shieldCheck"></span></div><h3>Safety checks</h3><p>Resources are only committed when every admitted patient can still be treated, checked continuously.</p></article>
+        <article><div class="hf-icon slate"><span data-icon="download"></span></div><h3>Shift reports</h3><p>Download a full handover report of patients, sensors, resources and events in one click.</p></article>
+      </div>
+    </section>
+
+    <section id="how" class="h-section">
+      <div class="h-section-head"><h2>How it works</h2><p>From admission to handover in three steps.</p></div>
+      <ol class="h-steps">
+        <li><span class="hs-n">1</span><h3>Admit and connect</h3><p>Register the patient and attach the sensors they need. Monitoring starts immediately.</p></li>
+        <li><span class="hs-n">2</span><h3>Monitor continuously</h3><p>Readings stream in, triage updates on its own and alerts reach the team the moment something changes.</p></li>
+        <li><span class="hs-n">3</span><h3>Act on priorities</h3><p>Critical patients get beds, equipment and staff first, and the shift report captures everything at handover.</p></li>
+      </ol>
+    </section>
+
+    <section class="h-band">
+      <div><h2>Ready to start your shift?</h2><p>The live monitor is running now.</p></div>
+      <a class="btn primary big" href="#monitor">Open Dashboard</a>
+    </section>
+
+    <footer class="h-foot">
+      <div class="h-foot-brand"><b>Hospital OS</b><span>Real-time patient monitoring for General Hospital</span></div>
+      <div class="h-foot-meta">Developed by Aesha Singh, G. Moksha Manaswi and Kalash Krishnaut · Vellore Institute of Technology · © 2026</div>
+    </footer>
+  </div>
+
+  <aside class="sidebar">
+    <a class="brand" href="#home" title="Home">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div><div class="brand-name">Hospital OS</div><div class="brand-sub">Patient Monitoring</div></div>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-item" href="#monitor" data-view="monitor"><span data-icon="grid"></span><span>Live Monitor</span><span id="nav-badge" class="badge" hidden>0</span></a>
+      <a class="nav-item" href="#patients" data-view="patients"><span data-icon="users"></span><span>Patients</span></a>
+      <a class="nav-item" href="#sensors" data-view="sensors"><span data-icon="radio"></span><span>Sensors</span></a>
+      <a class="nav-item" href="#resources" data-view="resources"><span data-icon="stetho"></span><span>Resources</span></a>
+    </nav>
+    <div class="side-foot">
+      <button id="run-btn" class="run-btn" data-action="toggle-run"></button>
+      <div class="side-meta"><span id="tick-info"></span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="page-title">Live Monitor</h1>
+        <p class="subtitle">General Hospital — Real-time Patient Monitoring System</p>
+      </div>
+      <div class="top-stats">
+        <div><span>Monitored Patients</span><b id="h-mon">0</b></div>
+        <div><span>Active Sensors</span><b id="h-sens">0</b></div>
+        <div><span>Active Alerts</span><b id="h-alerts">0</b></div>
+        <div class="export-wrap"><button class="btn export-btn" data-action="export" title="Download a CSV of patients, sensors, resources and events"><span data-icon="download"></span>Shift Report</button></div>
+      </div>
+    </header>
+    <div id="view" class="view"></div>
+  </main>
+
+  <div id="modal-root" class="modal-root" hidden></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+</body>
+</html>
