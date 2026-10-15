@@ -40,11 +40,3 @@ Opening `index.html` directly (without the server) also works, but data is then 
 | `app.js` | Monitoring loop, triage, sensor reliability, resource allocation and all views |
 | `styles.css` | Styling |
 | `server.js` | Web server and SQLite storage |
-
-## Team
-
-- Aesha Singh (24BCT0156)
-- G. Moksha Manaswi (24BCT0232)
-- Kalash Krishnaut (24BDS0447)
-
-Under the guidance of Perepi Rajarajeshwari.
