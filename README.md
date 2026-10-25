@@ -1,5 +1,7 @@
 # Hospital OS
 
+[Live Demo](https://hospital-os-web.vercel.app)
+
 Real-time patient monitoring for a hospital ward. Hospital OS shows live vital signs, grades each patient by triage level, assigns beds, equipment and staff automatically, and flags unreliable sensor readings.
  
 Built as the Operating Systems course project *Adaptive Medical Trust Device Scheduling Framework for Intelligent Resource Allocation in Critical Care Systems* at Vellore Institute of Technology.
